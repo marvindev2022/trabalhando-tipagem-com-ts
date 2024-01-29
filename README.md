@@ -11,9 +11,11 @@ type Model = {
   phone: string;
 };
 
-type CamelCase<Prop, Prefix extends string> = {
-  [K in keyof Prop as `${Prefix & string}${Capitalize<string & K>}`]: Prop[K];
-};
+ type CamelCaseConvert<Prop, Prefix extends string> = { // o uso do extends é para garantir que o prefixo seja uma string
+    [K in keyof Prop as `${Prefix & string}${Capitalize<string & K>}`]: Prop[K]; /* o uso de " & string" é para evitar o erro de "Type 'K' cannot be used to index type 'Prop'."
+    Capitalize é para garantir que a primeira letra da propriedade seja maiúscula
+     */
+  };
 
 const example: CamelCase<Model, 'client'> = {
   clientName: 'example',
