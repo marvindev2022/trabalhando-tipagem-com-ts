@@ -22,7 +22,6 @@ type SnakeCaseModel = {
     clientPhone: 'teste',
   };
   
-  
   console.log(teste);
 
   
