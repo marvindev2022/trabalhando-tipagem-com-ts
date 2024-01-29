@@ -1,6 +1,6 @@
 type DataBaseModel = {
     name: string;
-    age: Date;
+    birthDate: Date;
     email: string;
     address: string;
     phone: string;
@@ -12,7 +12,7 @@ type DataBaseModel = {
   
   const primeiroTeste: CamelCaseConvert<DataBaseModel, 'client'> = {
     clientName: 'teste',
-    clientAge: new Date(),
+    clientBirthDate: new Date(),
     clientEmail: 'teste@gmail.com',
     clientAddress: 'teste',
     clientPhone: 'teste',
@@ -20,7 +20,7 @@ type DataBaseModel = {
   
   const outroTeste: CamelCaseConvert<DataBaseModel, 'user'> = {
     userName: 'teste',
-    userAge: new Date(),
+    userBirthDate: new Date(),
     userEmail: 'teste@gmail.com',
     userAddress: 'teste',
     userPhone: 'teste',
@@ -28,7 +28,7 @@ type DataBaseModel = {
   
   const ultimoTeste: CamelCaseConvert<DataBaseModel, 'admin'> = {
     adminAddress: 'teste',
-    adminAge: new Date(),
+    adminBirthDate: new Date(),
     adminEmail: 'teste@teste.com',
     adminName: 'teste',
     adminPhone: 'teste',
